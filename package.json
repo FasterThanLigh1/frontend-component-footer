@@ -74,7 +74,7 @@
   "release": {
     "tagFormat": "indigo-${version}",
     "branches": [
-      "redwood/indigo"
+      "teak/indigo"
     ]
   }
 }
