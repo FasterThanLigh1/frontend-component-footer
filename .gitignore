@@ -3,7 +3,7 @@ coverage
 dist
 node_modules
 temp
-
+.package.json
 .idea/
 
 src/i18n/transifex_input.json
