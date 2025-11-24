@@ -44,29 +44,16 @@ class SiteFooter extends React.Component {
               <ul className="logo-list">
                 <li>
                   <a
-                    href="https://edly.io/tutor/"
+                    href="https://veronlabs.com/"
                     rel="noreferrer"
                     target="_blank"
                   >
                     <img
-                      src={`/static/indigo/images/logo.png`}
+                      src={`${config.LMS_BASE_URL}/theming/asset/imgs/logo.png`}
                       alt={intl.formatMessage(
                         messages["footer.tutorlogo.altText"],
                       )}
                       width="57"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://open.edx.org"
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    <img
-                      src={logo || `/static/indigo/images/logo.png`}
-                      alt={intl.formatMessage(messages["footer.logo.altText"])}
-                      width="79"
                     />
                   </a>
                 </li>
