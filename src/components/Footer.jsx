@@ -4,7 +4,6 @@ import { injectIntl, intlShape } from "@edx/frontend-platform/i18n";
 import { sendTrackEvent } from "@edx/frontend-platform/analytics";
 import { ensureConfig, getConfig } from "@edx/frontend-platform";
 import { AppContext } from "@edx/frontend-platform/react";
-
 import messages from "./Footer.messages";
 import LanguageSelector from "./LanguageSelector";
 
@@ -35,6 +34,7 @@ class SiteFooter extends React.Component {
     const showLanguageSelector =
       supportedLanguages.length > 0 && onLanguageSelected;
     const config = getConfig();
+    const currentYear = new Date().getFullYear();
 
     return (
       <div className="wrapper wrapper-footer">
@@ -45,30 +45,69 @@ class SiteFooter extends React.Component {
                 <li>
                   <a
                     href="https://veronlabs.com/"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     target="_blank"
+                    onClick={this.externalLinkClickHandler}
                   >
                     <img
                       src={`${config.LMS_BASE_URL}/theming/asset/images/logo.png`}
-                      alt={intl.formatMessage(
-                        messages["footer.tutorlogo.altText"],
-                      )}
+                      alt="Runs on Tutor"
                       width="57"
                     />
                   </a>
                 </li>
               </ul>
             </div>
+
+            <nav
+              className="nav-colophon"
+              aria-label={intl.formatMessage(
+                messages["footer.about.ariaLabel"],
+              )}
+            >
+              <ol>
+                <li>
+                  <a href="/about" onClick={this.externalLinkClickHandler}>
+                    {intl.formatMessage(messages["footer.aboutUs"])}
+                  </a>
+                </li>
+                <li>
+                  <span>
+                    {intl.formatMessage(messages["footer.termsOfService"])}
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    {intl.formatMessage(messages["footer.privacyPolicy"])}
+                  </span>
+                </li>
+                <li>
+                  <a href="/contact" onClick={this.externalLinkClickHandler}>
+                    {intl.formatMessage(messages["footer.contactUs"])}
+                  </a>
+                </li>
+              </ol>
+            </nav>
           </div>
+
           <span className="copyright-site">
-            {intl.formatMessage(messages["footer.copyright.text"])}
+            {intl.formatMessage(messages["footer.copyright.text"], {
+              year: currentYear,
+            })}
           </span>
-          {showLanguageSelector && (
-            <LanguageSelector
-              options={supportedLanguages}
-              onSubmit={onLanguageSelected}
-            />
-          )}
+
+          <div className="colophon">
+            {showLanguageSelector && (
+              <LanguageSelector
+                options={supportedLanguages}
+                onSubmit={onLanguageSelected}
+              />
+            )}
+
+            <p className="copyright">
+              {intl.formatMessage(messages["footer.edx.copyright"])}
+            </p>
+          </div>
         </footer>
       </div>
     );
