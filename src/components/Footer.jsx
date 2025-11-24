@@ -49,7 +49,7 @@ class SiteFooter extends React.Component {
                     target="_blank"
                   >
                     <img
-                      src={`${config.LMS_BASE_URL}/theming/asset/imgs/tutor-logo.png`}
+                      src={`/static/indigo/images/logo.png`}
                       alt={intl.formatMessage(
                         messages["footer.tutorlogo.altText"],
                       )}
@@ -64,10 +64,7 @@ class SiteFooter extends React.Component {
                     target="_blank"
                   >
                     <img
-                      src={
-                        logo ||
-                        `${config.LMS_BASE_URL}/theming/asset/images/openedx-logo.png`
-                      }
+                      src={logo || `/static/indigo/images/logo.png`}
                       alt={intl.formatMessage(messages["footer.logo.altText"])}
                       width="79"
                     />
