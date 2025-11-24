@@ -49,7 +49,7 @@ class SiteFooter extends React.Component {
                     target="_blank"
                   >
                     <img
-                      src={`${config.LMS_BASE_URL}/theming/asset/imgs/logo.png`}
+                      src={`${config.LMS_BASE_URL}/theming/asset/images/logo.png`}
                       alt={intl.formatMessage(
                         messages["footer.tutorlogo.altText"],
                       )}
