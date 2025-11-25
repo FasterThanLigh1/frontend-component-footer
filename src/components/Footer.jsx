@@ -41,7 +41,7 @@ class SiteFooter extends React.Component {
         <footer id="footer" className="tutor-container">
           <div className="footer-top">
             <div className="powered-area">
-              <ul className="logo-list">
+              <ul className="custom-logo-list">
                 <li>{intl.formatMessage(messages["footer.poweredby.text"])}</li>
                 <li>
                   <a
