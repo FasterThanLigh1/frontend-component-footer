@@ -68,24 +68,26 @@ class SiteFooter extends React.Component {
               <ol>
                 <li>
                   <a href="/about" onClick={this.externalLinkClickHandler}>
-                    {intl.formatMessage(messages["footer.edxLinks.about"])}
+                    {intl.formatMessage(messages["footer.edxLinks.aboutUs"])}
                   </a>
-                </li>
-                <li>
-                  <span>Terms and Service</span>
                 </li>
                 <li>
                   <span>
                     {intl.formatMessage(
-                      messages["authoring.footer.privacyPolicy.link.label"],
+                      messages["footer.edxLinks.termsOfService"],
+                    )}
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    {intl.formatMessage(
+                      messages["footer.edxLinks.privacyPolicy"],
                     )}
                   </span>
                 </li>
                 <li>
                   <a href="/contact" onClick={this.externalLinkClickHandler}>
-                    {intl.formatMessage(
-                      messages["authoring.footer.help.contactUs.button.label"],
-                    )}
+                    {intl.formatMessage(messages["footer.edxLinks.contactUs"])}
                   </a>
                 </li>
               </ol>
@@ -105,6 +107,10 @@ class SiteFooter extends React.Component {
                 onSubmit={onLanguageSelected}
               />
             )}
+
+            <p className="copyright">
+              {intl.formatMessage(messages["footer.edx.copyright"])}
+            </p>
           </div>
         </footer>
       </div>
