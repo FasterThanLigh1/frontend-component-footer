@@ -41,23 +41,25 @@ class SiteFooter extends React.Component {
         <footer id="footer" className="tutor-container">
           <div className="footer-top">
             <div className="powered-area">
-              <ul className="custom-logo-list">
-                <li>{intl.formatMessage(messages["footer.poweredby.text"])}</li>
-                <li>
-                  <a
-                    href="https://veronlabs.com/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    onClick={this.externalLinkClickHandler}
-                  >
-                    <img
-                      src={`${config.LMS_BASE_URL}/theming/asset/images/logo.png`}
-                      alt="Runs on Tutor"
-                      width="57"
-                    />
-                  </a>
-                </li>
-              </ul>
+              <div className="custom-logo-container">
+                <span className="powered-text">
+                  {intl.formatMessage(messages["footer.poweredby.text"])}
+                </span>
+
+                <a
+                  className="logo-link"
+                  href="https://veronlabs.com/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  onClick={this.externalLinkClickHandler}
+                >
+                  <img
+                    src={`${config.LMS_BASE_URL}/theming/asset/images/logo.png`}
+                    alt="Runs on Tutor"
+                    width="57"
+                  />
+                </a>
+              </div>
             </div>
 
             <nav
