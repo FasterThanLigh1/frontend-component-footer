@@ -2,7 +2,7 @@
 
 # --- Configuration ---
 DEPLOY_BRANCH="deployment" # The prefix for your orphan branch name
-TEMP_DIR="../temp"        # The temporary directory outside of git
+TEMP_DIR="../temp-deploy"        # The temporary directory outside of git
 PACKAGE_FILE="package.json"
 
 # --- Pre-flight Checks ---
@@ -47,8 +47,6 @@ git checkout --orphan "$NEW_BRANCH_NAME"
 echo "4. Removing old files from the orphan branch..."
 # Remove all files from the index (they are still in the working directory)
 git rm -rf .
-# Now, remove all files from the working directory (except the .git folder)
-rm -rf *
 
 # --- Step 5: Copy Back and Stage Artifacts ---
 echo "5. Restoring package.json and adding build artifacts..."
