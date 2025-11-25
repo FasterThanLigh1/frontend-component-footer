@@ -146,7 +146,7 @@ const messages = defineMessages({
   },
   "footer.poweredby.text": {
     id: "footer.poweredby.text",
-    defaultMessage: "Powered by",
+    defaultMessage: "Powered by:",
     description: "text for the footer",
   },
   "footer.logo.altText": {
