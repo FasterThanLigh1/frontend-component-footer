@@ -76,12 +76,16 @@ class SiteFooter extends React.Component {
                 </li>
                 <li>
                   <span>
-                    {intl.formatMessage(messages["footer.privacyPolicy"])}
+                    {intl.formatMessage(
+                      messages["authoring.footer.privacyPolicy.link.label"],
+                    )}
                   </span>
                 </li>
                 <li>
                   <a href="/contact" onClick={this.externalLinkClickHandler}>
-                    {intl.formatMessage(messages["footer.contactUs"])}
+                    {intl.formatMessage(
+                      messages["authoring.footer.help.contactUs.button.label"],
+                    )}
                   </a>
                 </li>
               </ol>
@@ -101,10 +105,6 @@ class SiteFooter extends React.Component {
                 onSubmit={onLanguageSelected}
               />
             )}
-
-            <p className="copyright">
-              {intl.formatMessage(messages["footer.edx.copyright"])}
-            </p>
           </div>
         </footer>
       </div>
