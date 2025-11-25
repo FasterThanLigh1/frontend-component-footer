@@ -166,7 +166,7 @@ const messages = defineMessages({
   },
   "footer.copyright.text": {
     id: "footer.copyright.text",
-    defaultMessage: `Copyrights ©${new Date().getFullYear()}. All Rights Reserved.`,
+    defaultMessage: "Copyrights ©{year}. All Rights Reserved.",
     description: "copyright text for the footer",
   },
   "footer.ariaLabel": {
@@ -185,12 +185,12 @@ const messages = defineMessages({
     description: "",
   },
   "footer.edxLinks.privacyPolicy": {
-    id: "footer.privacyPolicy",
+    id: "footer.edxLinks.privacyPolicy",
     defaultMessage: "Privacy Policy",
     description: "",
   },
   "footer.edxLinks.contactUs": {
-    id: "footer.contactUs",
+    id: "footer.edxLinks.contactUs",
     defaultMessage: "Contact Us",
     description: "",
   },
