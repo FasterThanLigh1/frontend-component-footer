@@ -24,6 +24,10 @@ NEW_BRANCH_NAME="$DEPLOY_BRANCH-$CURRENT_VERSION"
 
 echo "Current version: $CURRENT_VERSION. New branch will be: $NEW_BRANCH_NAME"
 
+echo "Run npm install first"
+# npm run build should run first and create the 'dist' directory
+npm install
+
 # --- Step 1: Build and Version Update ---
 echo "1. Running build and version update..."
 # npm run build should run first and create the 'dist' directory
@@ -66,7 +70,7 @@ git push origin "$NEW_BRANCH_NAME" --force
 echo "7. Cleaning up and switching back to the previous branch..."
 # Switch back to your main development branch (assuming it's 'main' or 'master')
 # You will be prompted to do a checkout if you want to switch back to where you were
-git checkout main # Change 'main' to your primary development branch name
+git checkout sumac2 # Change 'main' to your primary development branch name
 
 # Clean up the temporary directory
 rm -rf "$TEMP_DIR"
