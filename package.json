@@ -1,6 +1,6 @@
 {
   "name": "@edly-io/indigo-frontend-component-footer",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Footer component for use when building Open edX frontend applications",
   "main": "dist/index.js",
   "publishConfig": {

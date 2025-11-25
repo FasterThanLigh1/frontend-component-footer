@@ -9,11 +9,14 @@ $gray-footer: #fcfcfc !default;
   align-items: center;
   gap: 10px;
 
-  .powered-text {
-    font-size: 12px;
-  }
-
   .logo-link {
     display: inline-block; /* Ensures link wraps image correctly */
   }
+}
+
+.powered-text {
+  font-size: 12px;
+  line-height: 18px;
+  color: #515661;
+  margin-right: 10px;
 }
