@@ -42,6 +42,7 @@ class SiteFooter extends React.Component {
           <div className="footer-top">
             <div className="powered-area">
               <ul className="logo-list">
+                <li>{intl.formatMessage(messages["footer.poweredby.text"])}</li>
                 <li>
                   <a
                     href="https://veronlabs.com/"
@@ -67,7 +68,10 @@ class SiteFooter extends React.Component {
             >
               <ol>
                 <li>
-                  <a href="/about" onClick={this.externalLinkClickHandler}>
+                  <a
+                    href={`${config.LMS_BASE_URL}/about`}
+                    onClick={this.externalLinkClickHandler}
+                  >
                     {intl.formatMessage(messages["footer.edxLinks.aboutUs"])}
                   </a>
                 </li>
@@ -86,7 +90,10 @@ class SiteFooter extends React.Component {
                   </span>
                 </li>
                 <li>
-                  <a href="/contact" onClick={this.externalLinkClickHandler}>
+                  <a
+                    href={`${config.LMS_BASE_URL}/contact`}
+                    onClick={this.externalLinkClickHandler}
+                  >
                     {intl.formatMessage(messages["footer.edxLinks.contactUs"])}
                   </a>
                 </li>
