@@ -68,13 +68,11 @@ class SiteFooter extends React.Component {
               <ol>
                 <li>
                   <a href="/about" onClick={this.externalLinkClickHandler}>
-                    {intl.formatMessage(messages["footer.aboutUs"])}
+                    {intl.formatMessage(messages["footer.edxLinks.about"])}
                   </a>
                 </li>
                 <li>
-                  <span>
-                    {intl.formatMessage(messages["footer.termsOfService"])}
-                  </span>
+                  <span>Terms and Service</span>
                 </li>
                 <li>
                   <span>
