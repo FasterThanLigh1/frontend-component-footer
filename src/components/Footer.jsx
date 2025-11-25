@@ -99,19 +99,6 @@ class SiteFooter extends React.Component {
               year: currentYear,
             })}
           </span>
-
-          <div className="colophon">
-            {showLanguageSelector && (
-              <LanguageSelector
-                options={supportedLanguages}
-                onSubmit={onLanguageSelected}
-              />
-            )}
-
-            <p className="copyright">
-              {intl.formatMessage(messages["footer.edx.copyright"])}
-            </p>
-          </div>
         </footer>
       </div>
     );
