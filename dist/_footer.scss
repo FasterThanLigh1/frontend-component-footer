@@ -1,0 +1,19 @@
+$gray-footer: #fcfcfc !default;
+
+.footer {
+  background-color: $gray-footer;
+}
+
+.custom-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .powered-text {
+    font-size: 12px;
+  }
+
+  .logo-link {
+    display: inline-block; /* Ensures link wraps image correctly */
+  }
+}
